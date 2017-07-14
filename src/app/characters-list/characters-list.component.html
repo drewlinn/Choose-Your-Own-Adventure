@@ -1,0 +1,7 @@
+<h2>Characters List</h2>
+
+<div *ngFor="let character of characters | async" (click)="goToDetailPage(character)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{character.name}}</em> {{character.gender}} {{character.inventory}} {{character.gold}}</h3>
+  </div>
+</div>
