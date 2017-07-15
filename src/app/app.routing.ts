@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent }   from './about/about.component';
 import { CharactersListComponent }   from './characters-list/characters-list.component';
 import { CharacterDetailComponent }   from './character-detail/character-detail.component';
+import { PlayerComponent } from './player/player.component'
 
 const appRoutes: Routes = [
   {
@@ -15,12 +16,16 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'characters',
+    path: 'characters-list',
     component: CharactersListComponent
   },
   {
     path: 'characters/:id',
     component: CharacterDetailComponent
+  },
+  {
+    path: 'player',
+    component: PlayerComponent
   }
  ];
 

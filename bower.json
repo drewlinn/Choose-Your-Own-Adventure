@@ -1,0 +1,20 @@
+{
+  "name": "choose-your-own-adventure",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Andrew <expandrew@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/drewlinn/Choose-Your-Own-Adventure",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

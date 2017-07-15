@@ -1,4 +1,4 @@
-{ "players": [{
+{ "characters": [{
     "name": "Fighter",
     "gender": "Male",
     "strength": 4,

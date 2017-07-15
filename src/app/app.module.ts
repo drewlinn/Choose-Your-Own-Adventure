@@ -9,7 +9,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PlayerComponent } from './player/player.component';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
-import { EditCharacterComponent } from './edit-character/edit-character.component';
+import { CharacterEditComponent } from './character-edit/character-edit.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -29,7 +29,7 @@ export const firebaseConfig = {
     PlayerComponent,
     CharactersListComponent,
     CharacterDetailComponent,
-    EditCharacterComponent
+    CharacterEditComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,56 @@
-<p>
-  player works!
-</p>
+<div class="panel panel-default">
+ <div class="panel-heading">
+   <h3 class="panel-title">Create A New Character!</h3>
+ </div>
+ <div class="panel-body">
+   <div>
+     <div>
+       <label>Character Name:</label>
+       <br>
+       <input #newName>
+     </div>
+
+     <div>
+       <label>Character Gender:</label>
+       <br>
+       <input #newGender>
+     </div>
+
+     <div>
+       <label>Character Charisma:</label>
+       <br>
+       <input #newCharisma>
+     </div>
+
+     <div>
+       <label>Character Dexterity:</label>
+       <br>
+       <input #newDexterity>
+     </div>
+
+     <div>
+       <label>Character Intelligence:</label>
+       <br>
+       <input #newIntelligence>
+     </div>
+
+     <div>
+       <label>Character Strength:</label>
+       <br>
+       <input #newStrength>
+     </div>
+
+     <div>
+       <label>Character Inventory:</label>
+       <br>
+       <textarea #newInventory></textarea>
+     </div>
+
+     <button (click)="submitForm(newName.value, newGender.value, newCharisma.value, newDexterity.value, newIntelligence.value, newStrength.value, newInventory.value); newName.value=''; newGender.value=''; newCharisma.value=''; newDexterity.value=''; newIntelligence.value=''; newStrength.value=''; newInventory.value=''">Add</button>
+   </div>
+ </div>
+</div>
+
+<div>
+  <app-characters-list></app-characters-list>
+</div>
