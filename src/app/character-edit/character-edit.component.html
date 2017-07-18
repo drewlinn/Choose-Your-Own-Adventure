@@ -3,7 +3,11 @@
 <input [(ngModel)]="selectedCharacter.name">
 <br>
 <label>New Character Gender:</label>
-<input [(ngModel)]="selectedCharacter.gender">
+<select [(ngModel)]="selectedCharacter.gender">
+  <option>Female</option>
+  <option>Male</option>
+  <option>Other</option>
+</select>
 <br>
 <label>New Character Charisma:</label>
 <input [(ngModel)]="selectedCharacter.charisma">
