@@ -9,39 +9,40 @@ import { Character } from '../character.model';
   providers: [CharacterService]
 })
 export class PlayerComponent implements OnInit {
-  // mother: string = '';
-  // childhood: string = '';
-  // apprentice: string = '';
-  // living: string = '';
 
   charisma: number = 1;
   dexterity: number = 1;
   intelligence: number = 1;
   strength: number = 1;
+  checkFirst: boolean = true;
+  checkSecond: boolean = true;
+  checkThird: boolean = true;
+  checkFourth: boolean = true;
 
 
   constructor(private characterService: CharacterService) { }
 
+  addChar() {
+    this.charisma += 1;
+  }
+
+  addDex() {
+    this.dexterity += 1;
+  }
+
+  addInt() {
+    this.intelligence += 1;
+  }
+
+  addStr() {
+    this.strength += 1;
+  }
+
   ngOnInit() {
   }
 
+
   submitForm(name: string, gender: string, charisma: number, dexterity: number, intelligence: number, strength: number) {
-    // var charisma = 1;
-    // var dexterity = 1;
-    // var intelligence = 1;
-    // var strength = 1;
-
-    // console.log(mother);
-
-    // if (mother === "C" || childhood === "C" || apprentice === "C" || living === "C") {
-    //   charisma += 1;
-    // } else if (mother === "D" || childhood === "D" || apprentice === "D" || living === "D") {
-    //   dexterity += 1;
-    // } else if (mother === "I" || childhood === "I" || apprentice === "I" || living === "I") {
-    //   intelligence += 1;
-    // } else if (mother === "S" || childhood === "S" || apprentice === "S" || living === "S") {
-    //   strength += 1;
-    // }
 
     var newCharacter: Character = new Character(name, gender, charisma, dexterity, intelligence, strength);
     this.characterService.addCharacter(newCharacter);
