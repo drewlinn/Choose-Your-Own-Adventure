@@ -13,6 +13,12 @@ import { CharacterEditComponent } from './character-edit/character-edit.componen
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { Scene01Component } from './scene01/scene01.component';
+import { Scene02Component } from './scene02/scene02.component';
+import { Scene03Component } from './scene03/scene03.component';
+import { Scene04Component } from './scene04/scene04.component';
+import { Scene05Component } from './scene05/scene05.component';
+import { Scene06Component } from './scene06/scene06.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +35,13 @@ export const firebaseConfig = {
     PlayerComponent,
     CharactersListComponent,
     CharacterDetailComponent,
-    CharacterEditComponent
+    CharacterEditComponent,
+    Scene01Component,
+    Scene02Component,
+    Scene03Component,
+    Scene04Component,
+    Scene05Component,
+    Scene06Component
   ],
   imports: [
     BrowserModule,
