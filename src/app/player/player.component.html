@@ -27,25 +27,25 @@
        <br>
        <div class="radio">
          <label>
-           <input type="radio" name="mother" value="C" checked>
+           <input type="radio" name="motherC" [(ngModel)]="charisma" value="1">
            Barmaid
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="mother" value="D">
+           <input type="radio" name="motherD" [(ngModel)]="dexterity" value="1">
            Seamstress
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="mother" value="I">
+           <input type="radio" name="motherI" [(ngModel)]="intelligence" value="1">
            Cook
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="mother" value="S">
+           <input type="radio" name="motherS" [(ngModel)]="strength" value="1">
            Farmgirl
          </label>
        </div>
@@ -53,58 +53,57 @@
      <div>
        <label>As a child you spent most of your time...</label>
        <br>
-
        <div class="radio">
          <label>
-           <input type="radio" name="childhood" value="C" checked>
+           <input type="radio" name="childhoodC" [(ngModel)]="charisma" value="1">
            Helping your mother around the house.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="childhood" value="D">
+           <input type="radio" name="childhoodD" [(ngModel)]="dexterity" value="1">
            Running and playing in the nearby woods.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="childhood" value="I">
+           <input type="radio" name="childhoodI" [(ngModel)]="intelligence" value="1">
            Listening to the stories of the Village Elders.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="childhood" value="S">
+           <input type="radio" name="childhoodS" [(ngModel)]="strength" value="1">
            Helping your father cut and haul lumber.
          </label>
        </div>
      </div>
 
-     <div>
+     <!-- <div>
        <label>As a young adult you apprenticed with...</label>
        <br>
 
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" value="C" checked>
+           <input type="radio" name="apprentice" [(ngModel)]="charisma" value="1">
            Your father
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" value="D">
+           <input type="radio" name="apprentice" [(ngModel)]="dexterity" value="1">
            The Innkeeper
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" value="I">
+           <input type="radio" name="apprentice" [(ngModel)]="intelligence" value="1">
            The Clergyman
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" value="S">
+           <input type="radio" name="apprentice" [(ngModel)]="strength" value="1">
            The Stablemaster
          </label>
        </div>
@@ -116,31 +115,31 @@
 
        <div class="radio">
          <label>
-           <input type="radio" name="living" value="C" checked>
+           <input type="radio" name="living" [(ngModel)]="charisma" value="1">
            Take over the family business, chopping wood.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="living" value="D">
+           <input type="radio" name="living" [(ngModel)]="dexterity" value="1">
            Roam the woods as a hunter.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="living" value="I">
+           <input type="radio" name="living" [(ngModel)]="intelligence" value="1">
            Become a scholar.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="living" value="S">
+           <input type="radio" name="living" [(ngModel)]="strength" value="1">
            Join the Village Militia.
          </label>
        </div>
-     </div>
+     </div> -->
 
-     <button (click)="submitForm(newName.value, newGender.value, mother.value, childhood.value, apprentice.value, living.value); newName.value=''; newGender.value=''">Add</button>
+     <button (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
     </div>
   </div>
 </div>
