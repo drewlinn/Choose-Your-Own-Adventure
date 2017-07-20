@@ -14,10 +14,10 @@ export class PlayerComponent implements OnInit {
   dexterity: number = 1;
   intelligence: number = 1;
   strength: number = 1;
-  checkFirst: boolean = true;
-  checkSecond: boolean = true;
-  checkThird: boolean = true;
-  checkFourth: boolean = true;
+  // checkFirst: boolean = true;
+  // checkSecond: boolean = true;
+  // checkThird: boolean = true;
+  // checkFourth: boolean = true;
 
 
   constructor(private characterService: CharacterService) { }
