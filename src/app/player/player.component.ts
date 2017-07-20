@@ -18,6 +18,12 @@ export class PlayerComponent implements OnInit {
   // checkSecond: boolean = true;
   // checkThird: boolean = true;
   // checkFourth: boolean = true;
+  // public stats = [
+  //   { value: 'C', display: 'Charisma' },
+  //   { value: 'D', display: 'Dexterity' },
+  //   { value: 'I', display: 'Intelligence' },
+  //   { value: 'S', display: 'Strength' }
+  // ];
 
 
   constructor(private characterService: CharacterService) { }
@@ -42,7 +48,22 @@ export class PlayerComponent implements OnInit {
   }
 
 
-  submitForm(name: string, gender: string, charisma: number, dexterity: number, intelligence: number, strength: number) {
+  submitForm(name: string, gender: string, mother: string, childhood: string, apprentice: string, living: string) {
+
+    let charisma: number = 1;
+    let dexterity: number = 1;
+    let intelligence: number = 1;
+    let strength: number = 1;
+
+    if (mother === "charisma" || childhood === "charisma" || apprentice === "charisma" || living === "charisma") {
+      charisma += 1;
+    } else if (mother === "dexterity" || childhood === "dexterity" || apprentice === "dexterity" || living === "dexterity") {
+       dexterity += 1;
+    } else if (mother === "intelligence" || childhood === "intelligence" || apprentice === "intelligence" || living === "intelligence") {
+      intelligence += 1;
+    } else if (mother === "strength" || childhood === "strength" || apprentice === "strength" || living === "strength") {
+      strength += 1;
+    }
 
     var newCharacter: Character = new Character(name, gender, charisma, dexterity, intelligence, strength);
     this.characterService.addCharacter(newCharacter);

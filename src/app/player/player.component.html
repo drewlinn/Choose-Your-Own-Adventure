@@ -19,115 +19,135 @@
          <option>Other</option>
        </select>
      </div>
-     <!-- {{charisma}} {{dexterity}} {{intelligence}} {{strength}} -->
-     <div class="form-group">
+     {{charisma}} {{dexterity}} {{intelligence}} {{strength}}
+     <div>
        <label>Your father was a humble lumberjack. He worked hard every single day chopping down mighty trees and hauling the wood to sell in the village.
 
        Your mother was a ... </label>
        <br>
-       <div class="radio" id="mother">
+       <!-- <div *ngFor="let stat of stats">
          <label>
-           <input #barmaid type="radio" name="mother" value="charisma">
+           <input type="radio" name="stat" [(ngModel)]="character.stat" [value]="stat.value">
+           {{stat.display}}
+         </label>
+       </div> -->
+
+
+       <div class="radio">
+         <label>
+           <input #motherC type="radio" name="mother">
            Barmaid
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input #seamstress type="radio" name="mother" value="dexterity">
+           <input #motherD type="radio" name="mother">
            Seamstress
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input #cook type="radio" name="mother" value="intelligence">
+           <input #motherI type="radio" name="mother">
            Cook
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input #farmgirl type="radio" name="mother" value="strength">
+           <input #motherS type="radio" name="mother">
            Farmgirl
          </label>
        </div>
+       {{motherC.checked}} {{motherD.checked}} {{motherI.checked}} {{motherS.checked}}
      </div>
-     {{barmaid.checked}}
 
-     <div class="form-group">
+     <!-- <div>
        <label>As a child you spent most of your time...</label>
        <br>
        <div class="radio">
          <label>
-           <input #helpMom type="radio" name="childhood" value="charisma">
+           <input #childhoodC type="radio" name="childhood">
            Helping your mother around the house.
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input #runWoods type="radio" name="childhood" value="dexterity">
+           <input #childhoodD type="radio" name="childhood">
            Running and playing in the nearby woods.
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input #elders type="radio" name="childhood" value="intelligence">
+           <input #childhoodI type="radio" name="childhood">
            Listening to the stories of the Village Elders.
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input #helpDad type="radio" name="childhood" value="strength">
+           <input #childhoodS type="radio" name="childhood">
            Helping your father cut and haul lumber.
          </label>
        </div>
      </div>
 
-     <div class="form-group">
+     <div>
        <label>As a young adult you apprenticed with...</label>
        <br>
 
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" value="charisma">
+           <input #apprenticeC type="radio" name="apprentice">
            Your father
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input type="radio" name="apprentice" value="dexterity">
+           <input #apprenticeD type="radio" name="apprentice">
            The Innkeeper
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input type="radio" name="apprentice" value="intelligence">
+           <input #apprenticeI type="radio" name="apprentice">
            The Clergyman
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input type="radio" name="apprentice" value="strength">
+           <input #apprenticeS type="radio" name="apprentice">
            The Stablemaster
          </label>
        </div>
      </div>
 
-     <div class="form-group">
+     <div>
        <label>One particularly harsh Winter, food and money were scarce. In an act of desperation to feed his family, your father stole some food so your family could make it through til spring. Unfortunately, the people that the food belonged to were well connected with the local lord, who then had your father executed for theft. This left your mother bereft of a means of living, so you decided to...</label>
        <br>
 
        <div class="radio">
          <label>
-           <input type="radio" name="living" value="charisma">
+           <input #livingC type="radio" name="living">
            Take over the family business, chopping wood.
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input type="radio" name="living" value="dexterity">
+           <input #livingD type="radio" name="living">
            Roam the woods as a hunter.
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input type="radio" name="living" value="intelligence">
+           <input #livingI type="radio" name="living">
            Become a scholar.
          </label>
-         <br>
+       </div>
+       <div class="radio">
          <label>
-           <input type="radio" name="living" value="strength">
+           <input #livingS type="radio" name="living">
            Join the Village Militia.
          </label>
        </div>
-     </div>
+     </div> -->
 
      <button (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
    </form>
