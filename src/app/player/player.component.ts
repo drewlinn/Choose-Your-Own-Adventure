@@ -10,39 +10,30 @@ import { Character } from '../character.model';
 })
 export class PlayerComponent implements OnInit {
 
-  charisma: number = 1;
-  dexterity: number = 1;
-  intelligence: number = 1;
-  strength: number = 1;
-  // checkFirst: boolean = true;
-  // checkSecond: boolean = true;
-  // checkThird: boolean = true;
-  // checkFourth: boolean = true;
-  // public stats = [
-  //   { value: 'C', display: 'Charisma' },
-  //   { value: 'D', display: 'Dexterity' },
-  //   { value: 'I', display: 'Intelligence' },
-  //   { value: 'S', display: 'Strength' }
-  // ];
-
+  // charisma: number = 1;
+  // dexterity: number = 1;
+  // intelligence: number = 1;
+  // strength: number = 1;
+  // radioButtonGroup=[mother, childhood, apprentice, living];
 
   constructor(private characterService: CharacterService) { }
 
-  addChar() {
-    this.charisma += 1;
-  }
 
-  addDex() {
-    this.dexterity += 1;
-  }
-
-  addInt() {
-    this.intelligence += 1;
-  }
-
-  addStr() {
-    this.strength += 1;
-  }
+  // addChar() {
+  //   this.charisma += 1;
+  // }
+  //
+  // addDex() {
+  //   this.dexterity += 1;
+  // }
+  //
+  // addInt() {
+  //   this.intelligence += 1;
+  // }
+  //
+  // addStr() {
+  //   this.strength += 1;
+  // }
 
   ngOnInit() {
   }
@@ -50,23 +41,68 @@ export class PlayerComponent implements OnInit {
 
   submitForm(name: string, gender: string, mother: string, childhood: string, apprentice: string, living: string) {
 
-    let charisma: number = 1;
-    let dexterity: number = 1;
-    let intelligence: number = 1;
-    let strength: number = 1;
+    console.log(mother);
+    console.log(childhood);
+    console.log(apprentice);
+    console.log(living);
 
-    if (mother === "charisma" || childhood === "charisma" || apprentice === "charisma" || living === "charisma") {
-      charisma += 1;
-    } else if (mother === "dexterity" || childhood === "dexterity" || apprentice === "dexterity" || living === "dexterity") {
-       dexterity += 1;
-    } else if (mother === "intelligence" || childhood === "intelligence" || apprentice === "intelligence" || living === "intelligence") {
-      intelligence += 1;
-    } else if (mother === "strength" || childhood === "strength" || apprentice === "strength" || living === "strength") {
-      strength += 1;
+    var charisma = 1;
+    var dexterity = 1;
+    var intelligence = 1;
+    var strength = 1;
+
+    if(mother === "charisma" || childhood === "charisma" || apprentice === "charisma" || living === "charisma"){
+      charisma++;
     }
+    if(mother === "dexterity" || childhood === "dexterity" || apprentice === "dexterity" || living === "dexterity"){
+      dexterity++;
+    }
+    if(mother === "intelligence" || childhood === "intelligence" || apprentice === "intelligence" || living === "intelligence"){
+      intelligence++;
+    }
+    if(mother === "strength" || childhood === "strength" || apprentice === "strength" || living === "strength"){
+      strength++;
+    }
+
+
+    console.log(name);
+    console.log(gender);
+    console.log(charisma);
+    console.log(dexterity);
+    console.log(intelligence);
+    console.log(strength);
+
+
+
+
+    // var stats = document.forms["stats"];
+    // var i;
+    // for (i = 1; i < stats.length; i++)  {
+    //   if (stats.elements[i].checked === true && stats.elements[i].value === 'charisma') {
+    //       charisma++;
+    //       return charisma;
+    //     }
+    //   if (stats.elements[i].checked === true && stats.elements[i].value === 'dexterity')
+    //     {
+    //       dexterity++;
+    //       return dexterity;
+    //     }
+    //   if (stats.elements[i].checked === true && stats.elements[i].value === 'intelligence')
+    //     {
+    //       intelligence++;
+    //       return intelligence;
+    //     }
+    //   if (stats.elements[i].checked === true && stats.elements[i].value === 'strength')
+    //     {
+    //       strength++;
+    //       return strength;
+    //     }
+    //     return charisma && dexterity && intelligence && strength
+    //   }
+
 
     var newCharacter: Character = new Character(name, gender, charisma, dexterity, intelligence, strength);
     this.characterService.addCharacter(newCharacter);
     console.log(newCharacter);
-  }
+  };
 }
